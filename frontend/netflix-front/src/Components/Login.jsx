@@ -41,9 +41,7 @@ const Login = () => {
             setpasserr('')
         }
         if (!checked) {
-             axios.get(`http://localhost:3000/login?mobile=${num}&password=${pass}`,{ withCredentials: true })       
-            
-
+             axios.get(`https://netflix-login-33r4.onrender.com/login?mobile=${num}&password=${pass}`,{ withCredentials: true })       
                 .then( (data) => {
                     if (data.data === true) {
                         navigate('/success')
