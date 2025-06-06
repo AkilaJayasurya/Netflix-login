@@ -4,11 +4,19 @@ const cors = require("cors");
 const app = express();
 
 // Allow CORS from the frontend
-app.use(cors({
-    origin: "http://localhost:5173",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-}));
+// app.use(cors({
+//     origin: "https://netflix-frontend-hoad.onrender.com",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+// }));
+
+// app.use(cors({
+//   origin: "", // your actual frontend domain
+//   credentials: true,
+//  }));
+
+app.use(cors())
+
 
 // default login details
 const mobile = "1234567890";
